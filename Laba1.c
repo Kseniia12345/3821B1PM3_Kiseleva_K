@@ -2,41 +2,42 @@
 #include <stdlib.h>
 #include <locale.h>
 int main()
-{	setlocale(LC_ALL, "Rus");
+{	
+	setlocale(LC_ALL, "Rus");
 	double n = 0.0, max = 0.0, min = 0.0, c = 0.0, sum = 0.0;
 	double* mas;
 	int* mass;
-	printf("Введите количество значений ");
+	printf("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г§Г­Г Г·ГҐГ­ГЁГ© ");
 	scanf_s("%lf", &n);
 
-	if (n <= 0) //проверка n
+	if (n <= 0) //ГЇГ°Г®ГўГҐГ°ГЄГ  n
 	{
-		printf("Ошибка! Kоличество значений <=0");
+		printf("ГЋГёГЁГЎГЄГ ! KГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г§Г­Г Г·ГҐГ­ГЁГ© <=0");
 		return 0;
 	}
 
-	printf("Введите значение min ");
+	printf("Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ min ");
 	scanf_s("%lf", &min);
-	printf("Введите значение max ");
+	printf("Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ max ");
 	scanf_s("%lf", &max);
 
-	if (min > max) //проверка max и min
+	if (min > max) //ГЇГ°Г®ГўГҐГ°ГЄГ  max ГЁ min
 	{
-		printf("Ошибка! min>max \n");
+		printf("ГЋГёГЁГЎГЄГ ! min>max \n");
 		return 0;
 	}
 
-	mas = (double*)malloc(n * sizeof(double)); //создание массива
+	mas = (double*)malloc(n * sizeof(double)); //Г±Г®Г§Г¤Г Г­ГЁГҐ Г¬Г Г±Г±ГЁГўГ 
 	mass = (int*)malloc(n * sizeof(int));
-	if (mas == 0) //проверка создался ли массив
+	if (mas == 0) //ГЇГ°Г®ГўГҐГ°ГЄГ  Г±Г®Г§Г¤Г Г«Г±Гї Г«ГЁ Г¬Г Г±Г±ГЁГў
 	{
-		printf("Ошибка! Hе удалось создать массив \n");
+		printf("ГЋГёГЁГЎГЄГ ! HГҐ ГіГ¤Г Г«Г®Г±Гј Г±Г®Г§Г¤Г ГІГј Г¬Г Г±Г±ГЁГў \n");
 		return 0;
 	}
 
-	if (mass == 0) //проверка создался ли массив
+	if (mass == 0) //ГЇГ°Г®ГўГҐГ°ГЄГ  Г±Г®Г§Г¤Г Г«Г±Гї Г«ГЁ Г¬Г Г±Г±ГЁГў
 	{
-		printf("Ошибка! Hе удалось создать массив \n");
+		printf("ГЋГёГЁГЎГЄГ ! HГҐ ГіГ¤Г Г«Г®Г±Гј Г±Г®Г§Г¤Г ГІГј Г¬Г Г±Г±ГЁГў \n");
 		return 0;
 	}
 	for (int i = 0; i < n; i++)
